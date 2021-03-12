@@ -1,0 +1,25 @@
+[package]
+name = "calliope-nrf24"
+version = "0.1.0"
+authors = ["Jan Niehusmann <jan@gondor.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+usbd-serial = "0.1.1"
+embedded-hal = "0.2.4"
+nb = "1.0.0"
+cortex-m = "0.7.1"
+cortex-m-rt = "0.6.13"
+usb-device = "0.2.7"
+stm32-usbd = "0.5.1"
+#panic-halt = "0.2.0"
+embedded-nrf24l01 = { version="0.2.0", path="../embedded-nrf24l01/" }
+panic-rtt-target = { version="0.1.1", features=["cortex-m"] }
+rtt-target = { version="0.3.0", features=["cortex-m"] }
+crc16 = { version="0.4.0", default-features=false }
+
+[dependencies.stm32f1xx-hal]
+version = "0.7.0"
+features = ["rt", "stm32f103", "medium", "stm32-usbd"]
