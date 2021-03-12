@@ -15,7 +15,7 @@ cortex-m-rt = "0.6.13"
 usb-device = "0.2.7"
 stm32-usbd = "0.5.1"
 #panic-halt = "0.2.0"
-embedded-nrf24l01 = { version="0.2.0", path="../embedded-nrf24l01/" }
+embedded-nrf24l01 = { version="0.2.0" }
 panic-rtt-target = { version="0.1.1", features=["cortex-m"] }
 rtt-target = { version="0.3.0", features=["cortex-m"] }
 crc16 = { version="0.4.0", default-features=false }

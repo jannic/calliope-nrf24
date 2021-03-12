@@ -187,7 +187,9 @@ impl<
                     .unwrap();
                 nrf24.set_auto_ack(&[false; 6]).unwrap();
                 nrf24.set_crc(CrcMode::Disabled).unwrap();
-                nrf24.set_address_width(5).unwrap();
+                //not yet available in published version of embedded-nrf24l01,
+                //and 5 is the default, so just skip it
+                //nrf24.set_address_width(5).unwrap();
                 nrf24
                     .set_rx_addr(
                         0,
